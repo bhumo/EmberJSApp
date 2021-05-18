@@ -3,19 +3,24 @@
             background-color: lightgrey;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
         }
+
         .table-container{
             display:table;
             width:100%;
             padding:10px 20px;
             overflow: visible;
         }
+
         .tableRow{
-            display:table-row;        
+            display:table-row;
+            padding-bottom: 10px;        
         }
+
         .tableRow:hover{
             background-color:lightsteelblue;
             
         }
+
         .tableCell{
             display:table-cell;
             border: transparent;
@@ -26,6 +31,7 @@
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             
         }
+
         .tableHeader{
             display: table-row;
             background-color: black;
@@ -35,7 +41,10 @@
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             box-shadow: 2px 2px 2px 2px;
             
+            padding-top: 10px;
+            
         }
+
         .tableBody{
             display:table-row-group;
             width: 100%;
@@ -48,6 +57,7 @@
             height:50px;
             
         }
+
         .inactiveUser{
             margin: 0 auto;
             width: 20px;
@@ -86,7 +96,7 @@
         .avatar{
             vertical-align: middle;
             width: 50px;
-            height:50px;
+            height: 50px;
             
         }
 
@@ -96,3 +106,9 @@
             height: 145px;
         }
             
+        .search-box{
+            padding-bottom: 5px;
+            width: 250px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }

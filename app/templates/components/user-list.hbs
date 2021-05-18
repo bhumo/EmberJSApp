@@ -2,6 +2,7 @@
 <div class="table-container">
 
 <div class="tableBody">
+{{#list-filters  filter=filter as |filterUsers|}}
 <div class="tableHeader">
     <div class="tableCell">
         Name
@@ -22,8 +23,8 @@
         Delete
     </div>
 </div>
-<!-- Because list-filter is not working properly i have removed it from here for now -->
-{{#list-filters  filter=filter as |filterUsers|}}
+
+
 {{#each filterUsers as |user|}}
 <div class="tableRow">
     <div class="tableCell">
