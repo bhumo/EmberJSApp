@@ -23,7 +23,8 @@
     </div>
 </div>
 <!-- Because list-filter is not working properly i have removed it from here for now -->
-{{#each users as |user|}}
+{{#list-filters  filter=filter as |filterUsers|}}
+{{#each filterUsers as |user|}}
 <div class="tableRow">
     <div class="tableCell">
         {{#if user.avatar}}
@@ -52,6 +53,7 @@
     </div>
 </div>
 {{/each}}
+{{/list-filters}}
 
 </div>
 

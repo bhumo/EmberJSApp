@@ -13,14 +13,6 @@ export default Component.extend({
          // currentUser.deleteRecord();
          // currentUser.save();
         },
-        filterByName(inputValue,model){
-            console.log(inputValue);
-            console.log(model);
-            if(inputValue!= ''){
-                return model.query('user',{name: inputValue});
-            }else{
-                return model.findAll('user');
-            }
-        }
+        
     }
 });
