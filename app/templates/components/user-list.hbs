@@ -1,0 +1,58 @@
+
+<div class="table-container">
+
+<div class="tableBody">
+<div class="tableHeader">
+    <div class="tableCell">
+        Name
+    </div>
+    <div class="tableCell">
+        Email
+    </div>
+    <div class="tableCell">
+        Role
+    </div>
+    <div class="tableCell">
+        Status
+    </div>
+    <div class="tableCell">
+        Edit    
+    </div>
+    <div class="tableCell">
+        Delete
+    </div>
+</div>
+<!-- Because list-filter is not working properly i have removed it from here for now -->
+{{#each users as |user|}}
+<div class="tableRow">
+    <div class="tableCell">
+        {{#if user.avatar}}
+            <img src={{user.avatar}} class="avatar" alt=user.name>
+        {{else}}
+        
+            {{ember-initials size=50 name = user.name seedText = user.name  fontFamily="Helvetica Neue Light, Arial, sans-serif"}}
+        
+        {{/if}}
+        {{#link-to 'user.view' user.id}}{{user.name}}{{/link-to}}
+    </div>
+    <div class="tableCell">
+        {{user.email}}
+    </div>
+    <div class="tableCell">
+        {{user.role}}
+    </div>
+    <div class="tableCell">
+        <div class={{user.status}}></div>
+    </div>
+    <div class="tableCell">
+        {{#link-to  'user.edit' user.id class="btn btn-secondary btn-lg"}}Edit{{/link-to}} 
+    </div>
+    <div class="tableCell">
+        <button type="button" onclick = {{action 'deleteUser' user}} class="btn btn-secondary btn-lg">Delete</button>
+    </div>
+</div>
+{{/each}}
+
+</div>
+
+</div>

@@ -1,0 +1,15 @@
+<div class="card">
+         {{#if user.avatar}}
+            <img src={{user.avatar}} class="avatar-lg" alt=user.name>
+        {{else}}
+        
+            {{ember-initials size=145 name = user.name seedText = user.name  fontFamily="Helvetica Neue Light, Arial, sans-serif"}}
+        
+        {{/if}}
+        {{user.name}}
+        <p> Id : {{user.id}} </p>
+        <p> Email : {{user.email}}</p>
+        <p> Address : {{user.address}} </p>
+        <p> Role : {{user.role}} </p>
+        
+</div>

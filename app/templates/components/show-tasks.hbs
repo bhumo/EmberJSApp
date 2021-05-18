@@ -1,0 +1,12 @@
+<div class="card">
+         <p> Total No of Tasks : {{tasks.length}}</p>
+         {{#each tasks as |task|}}
+         <p> Id : {{task.id}}</p>
+         {{#if task.is_done}}
+            <p> Status : Completed</p>
+        {{else}}
+            <p> Status : Incomplete</p>
+        {{/if}}
+         <p> End-Date : {{task.end_date}}</p>
+         {{/each}}
+</div>

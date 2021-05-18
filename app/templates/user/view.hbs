@@ -1,0 +1,17 @@
+<div class="cards">
+    {{#show-user user=model.currentUser}}
+    {{/show-user}}
+
+    {{#if model.currentUser.posts.isFulfilled}}
+    {{#show-posts posts=model.currentUser.posts}}
+    {{/show-posts}}
+    {{/if}}
+
+    {{#if model.currentUser.tasks.isFulfilled}}
+    {{#show-tasks tasks=model.currentUser.tasks}}
+    {{/show-tasks}}
+    {{/if}}
+
+</div>
+
+
